@@ -1,0 +1,53 @@
+/* Cuppa — the website. Same vocabulary as the app: white, Inter, one amber. */
+:root {
+  --paper: #ffffff;
+  --ink: #141210;
+  --muted: #67625c;
+  --faint: #9a9590;
+  --line: #e8e6e2;
+  --well: #f3f2f0;
+  --brand: #cf6a12;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #000000;
+    --ink: #f5f3f0;
+    --muted: #a8a39d;
+    --faint: #7e7973;
+    --line: #26241f;
+    --well: #1a1917;
+    --brand: #e67a1c;
+  }
+}
+* { box-sizing: border-box; }
+html { color-scheme: light dark; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+main { max-width: 680px; margin: 0 auto; padding: 32px 24px 96px; }
+header { display: flex; align-items: center; justify-content: space-between; height: 56px; }
+.wordmark { font-weight: 700; font-size: 28px; letter-spacing: -0.04em; color: var(--brand); text-decoration: none; }
+nav a { color: var(--muted); text-decoration: none; margin-left: 20px; font-weight: 500; font-size: 15px; }
+nav a:hover { color: var(--ink); }
+h1 { font-size: 36px; line-height: 1.15; letter-spacing: -0.03em; margin: 48px 0 12px; }
+h2 { font-size: 21px; letter-spacing: -0.02em; margin: 40px 0 8px; }
+h3 { font-size: 17px; margin: 24px 0 4px; }
+p, li { color: var(--muted); }
+p strong, li strong { color: var(--ink); font-weight: 600; }
+.lead { font-size: 19px; }
+a { color: var(--brand); }
+hr { border: 0; border-top: 1px solid var(--line); margin: 32px 0; }
+.meta { color: var(--faint); font-size: 14px; }
+.row { display: flex; justify-content: space-between; align-items: baseline; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.row:last-child { border-bottom: 0; }
+.row .k { color: var(--ink); font-weight: 500; }
+.row .v { color: var(--muted); text-align: right; max-width: 60%; }
+.button { display: inline-block; background: var(--brand); color: #fff; font-weight: 600; padding: 14px 24px; border-radius: 999px; text-decoration: none; margin-top: 16px; }
+footer { color: var(--faint); font-size: 14px; margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--line); }
+footer a { color: var(--muted); }
